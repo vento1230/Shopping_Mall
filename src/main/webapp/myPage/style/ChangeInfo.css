@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+/* 회원정보 수정 페이지  */
+
+/* div#wrap 시작 */
+div#wrap{
+	margin: 100px auto;
+/*     border: 1px solid #000; */
+    width: 1440px;
+    
+	
+	
+}
+
+/* div#wrap 끝 */
+
+header{
+	
+	margin-left: 60px;
+/*     border: 1px solid #000; */
+
+	
+}
+
+header div#headerL{
+/*    border: 1px solid #000; */
+   margin-bottom: 19px;
+   display: inline-block;
+   margin-top: 10px;
+}
+
+header div#headerR{
+/* 	border: 1px solid #000; */
+	margin-left: 773px;
+    font-size: 13px;
+    display: inline-block;
+    position: relative;
+    top:6px
+}
+
+
+header span::before{
+	    
+	    content: "* ";
+		color: 	#ff3340;
+		font-size: 12px;
+}
+
+header span{
+	display: inline;
+	color: 	#ff3340;
+}
+
+/* div#main 시작 */
+
+
+/* div#changeInfo table시작 */
+div#changeInfo table{
+	margin-top: 40px;
+	margin-left: 20px;
+/* 	border: 1px solid #000; */
+}
+
+/*div#changeInfo table td:nth-of-type(1){
+ 	border: 1px solid #000; 
+	
+	
+}*/
+div#changeInfo table td:nth-of-type(2){
+/* 	border: 1px solid #000; */
+	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-left: 13px;
+}
+
+ /* div#changeInfo table 끝 */
+ 
+ 
+ /* div#changeInfo 시작 */
+td.req::before {   /* 입력 필수 */
+		content: "*  ";
+		color: 	#ff3340;
+		font-size: 12px;
+	}
+
+td.uNumberReq::before{
+		content: "*  ";
+ 		color: 	#fff; 
+		font-size: 12px;
+}
+ 
+ div#changeInfo{
+	width: 1100px;
+	height: 725px;
+	border-top: 1px solid #000;
+	margin-left: 60px;
+	border-bottom: 1px solid rgba(211,211,211,0.7);
+	font-size: 13px;
+
+}
+
+td.uName input{
+	width: 210px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    padding-left: 10px;
+    font-size: 13px;
+    }
+
+td.uPw input{
+	width: 210px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+	}
+
+td.uPw span{
+	padding-left: 10px;
+	color: 	#ff3340;
+}
+
+td.uPw_Re input{
+	width: 210px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+	}
+
+td.uBirthday select{
+	width: 90px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    padding-left: 10px;
+	}
+	
+td.uBirthday span{
+	margin-left: 5px;
+	margin-right: 5px;
+	}
+
+td.uEmailName{
+	
+	vertical-align: top;
+	padding-top: 20px;
+}
+
+td.uEmail input.uEmail{
+	width: 90px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    padding-left: 10px;
+	}
+
+td.uEmail span{
+	margin-left: 5px;
+	}
+
+td.uEmail select{
+	width: 210px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    margin-left: 7px;
+    padding-left: 10px;
+	}
+	
+td.uEmail button{
+	color: #fff;
+    width: 80px;
+    height: 42px;
+    font-size: 13px;
+    margin-left: 4px;
+    border: none;
+    border: 1px solid #000;
+    background-color: #000;
+	cursor:pointer;
+	}
+
+td.uEmail p{
+	margin-top: 10px;
+	
+}
+
+td.uEmail span{
+	color: rgba(0,0,0,0.5);
+	display: inline-block;
+	}
+	
+td.uNumber input{
+	width: 70px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+	}
+	
+	td.uNumber>span:nth-of-type(1){
+	color: #000;
+	margin-left: 8px;
+    margin-right: 2px;
+	}
+	td.uNumber>span:nth-of-type(2){
+	color: #000;
+	margin-left: 2px;
+    margin-right: 2px;
+	}
+	
+td.uPhoneName{
+	vertical-align: top;
+	padding-top: 20px;
+	}
+	
+td.uPhone select{
+	width: 70px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+	}
+	
+td.uPhone input.uPhone{
+	width: 70px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    padding-left: 10px;
+	}
+	
+td.uPhone p{
+	color: rgba(0,0,0,0.5);
+	
+	}
+
+td.uPhone>span:nth-of-type(1){
+	color: #000;
+	margin-left: 8px;
+    margin-right: 2px;
+    }
+
+td.uPhone>span:nth-of-type(2){
+	color: #000;
+	margin-left: 2px;
+    margin-right: 2px;
+    }
+
+td.uPhone p{
+    margin-top: 10px;	
+}
+
+td.uAddrName{
+	vertical-align: top;
+	padding-top: 20px;
+	}
+
+td.uAddr input:nth-of-type(1){
+	width: 90px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+}
+
+td.uAddr input:nth-of-type(2){
+	width: 90px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+}
+
+td.uAddr input:nth-of-type(3){
+	width: 315px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    margin-top: 15px;
+}
+
+td.uAddr input:nth-of-type(4){
+	width: 315px;
+	height: 40px;
+    border: 1px solid rgba(211,211,211,0.7);
+    outline: none;
+    margin-top: 15px;
+}
+
+td.uAddr>span:nth-of-type(1){
+	color: #000;
+	margin-left: 8px;
+    margin-right: 8px;
+	}
+
+td.uAddr button{
+	color: #fff;
+    width: 110px;
+    height: 42px;
+    font-size: 13px;
+    margin-left: 7px;
+    border: none;
+    border: 1px solid #000;
+    background-color: #000;
+	cursor:pointer;
+	}
+		
+label{
+	margin-left: 15px;
+	}
+	
+	input[type="radio"]{
+	margin-top: -1px;
+    vertical-align: middle;
+	margin-right: 5px;
+	}
+
+ /* div#changeInfo 끝 */
+ 
+ div#withdraw{
+ text-align: right ;
+ font-size: 13px;
+ margin-top: 10px;
+ 
+ }
+ 
+ button#confirmBtn{
+    color: #fff;
+    width: 100px;
+    font-size: 13px;
+    padding: 14px;
+    border: none;
+    background-color: #46479b;
+    cursor:pointer;
+    text-align: center;
+    margin: 50px auto;
+    display: block;
+ }
+/* div#main 끝 */

@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+/* 회원가입 처리 관련 스타일 시작   */
+
+
+#wrap h1{
+	
+/* 	border: 1px solid #f80;  */
+	width: 800px;
+	font-weight: lighter;
+	margin: 200px auto 30px;
+	text-align: center;
+	
+	
+}
+
+#wrap table{
+	
+	
+	width: 800px;
+   /*  border: 1px solid #f80;  */
+    margin: 20px auto;
+	border-collapse: collapse;
+}
+
+#wrap table td {
+    border: 1px solid #d3d3d3;
+    height: 5px;
+	position: relative;
+	
+}
+
+#wrap div#register input {
+/*     border: 1px solid #000 ; */
+
+	width: 100%;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 17px 25px;
+	display: inline-block;
+	border: none;
+}
+
+.btn1, .btn2{
+	
+/* 	border: 1px solid #0f3 !important; */
+	width:110px ;
+	height: 35px ;
+	position: absolute;
+	right:25px;
+	top:8px;
+    padding: 0px ;
+	font-size: 12px ;
+	cursor:pointer;
+	color: #000;
+    border: 1px solid rgba(0,0,0,0.5);
+	
+    
+    background-color: #fff;
+    
+}
+
+.btn1:hover, .btn2:hover{
+
+	   border: 1px solid #000;
+	   background-color: #000;
+	   color: #fff;
+	
+
+}
+
+input::-webkit-input-placeholder {
+  color: #c0c0c0;
+ 
+}
+input:-ms-input-placeholder {
+  color: #c0c0c0;
+ 
+}
+textarea::-webkit-input-placeholder {
+  color: #c0c0c0;
+
+}
+textarea:-ms-input-placeholder {
+  color: #c0c0c0;
+
+}
+
+input:focus {outline:none;}
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder 
+{ /* Internet Explorer 10+ */ color:transparent; }
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder 
+{ /* WebKit browsers */ color:transparent; }
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder 
+{ /* Mozilla Firefox 4 to 18 */ color:transparent; } 
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder 
+{ /* Mozilla Firefox 19+ */ color:transparent; }
+
+div#chk{
+	/* border: 1px solid #000; */
+    width: 800px;
+    margin: auto;
+	font-size: 15px;
+  
+}
+
+#chk div#mainChkArea span{
+	
+	color:#0000cd;
+	font-weight: bold;
+	
+}
+#chk div#mainChkArea P{
+	
+	margin-top: 5px;
+	line-height: 25px;
+    color: #a9a9a9;
+  
+}
+#chk div#mainChkArea b{
+	
+	
+	font-weight: bold;
+	color: rgba(255,0,0,0.8);
+  
+}
+
+#chk div#subChkArea{
+	
+	width: 775px;
+	height: 150px;
+	border: 1px solid #d3d3d3;
+	margin: 20px auto;
+    font-size: 15px;
+    padding: 25px 30px;
+	
+	}
+	
+#subChkArea #subChk{
+	font-weight: bold;
+	
+	
+}
+#subChkArea p{
+	margin-top: 20px;
+	line-height: 20px;
+	
+}
+
+#wrap div#buttonArea{
+	
+   /* border: 1px solid #000;  */
+    width: 260px;
+    height: 75px;
+    margin: 20px auto;
+	
+}
+
+#wrap div#buttonArea button{
+	color: #fff;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #46479b;
+	cursor:pointer;
+	border: none;
+  
+}

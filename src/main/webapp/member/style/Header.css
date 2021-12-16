@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+div#headerwrap{
+	margin: 0 auto;
+	width: 1500px;
+
+}
+div#headerwrap ul{
+	
+text-align: center;
+            list-style-type: none; 
+    margin-top: 14px;
+}
+div#headerwrap  ul li{
+display: inline-block;
+margin-top: 12px;
+        }
+
+div#headerwrap li a {
+	margin-left: 20px;
+margin-right: 20px;
+	
+}
+
+
+div#size th{
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+div#loginArea th{
+	padding: 5px;
+	
+	font-size: 16px;
+		cursor: pointer;
+}
+
+div#header {
+	position:sticky;
+    padding: 0 4px;
+    margin: 5px 0;
+    justify-content: space-between;
+    border: 1px solid #e2e2e2;
+ line-height: 13px;
+ padding-top: 8px;
+}
+
+
+#headerwrap #header div#size tbody th{
+	
+		cursor: pointer;
+}
+
+
+
+
+div#headerwrap div#line ul.text{
+margin-top: -100;
+	
+	}
+
+div#headerwrap div#line{
+	/* border: 1px solid #000; */
+box-sizing:content-box;
+	text-align: center;
+overflow: inherit;
+}
+
+img{
+	display: block;
+	margin: auto;
+	margin-bottom: -100px;
+}
+
+
+div#headerwrap div#line::first-child{
+cursor: pointer;
+}
+
+
+div#headerwrap div#line th{
+	padding-left: 40px;
+padding-right: 40px;
+margin-left: 150%;
+margin-right: 100%;
+}
+
+div#headerwrap div#line li{
+padding-left: 40px;
+padding-bottom: 10px;
+margin-bottom: 15px;
+font-style: oblique;
+font-weight: bold;
+font-size: 19px;
+}
+
+
+
+/* 중간 넘어가는 스타일  */
+
+
+div#slide {    /* 이미지 1개의 크기를 적용 */
+    width: 770px;
+    height: 750px;
+margin: 0 auto;
+    overflow: hidden; 
+
+    /* 슬라이드쇼 방향키의 위치기준을 
+    적용하기 위한 포지션 */
+    position: relative;   
+
+
+}
+
+div#shuttleFrame {    /* 이미지 전체의 폭 */
+    width: 2360px;
+    height: 750px;
+    
+}
+
+#slide a {
+    position: relative;
+}
+
+/* 슬라이드쇼 방향키 시작 */
+div.arrowMark {
+    color: rgba(221, 221, 221, 0.61);
+    font-size: 60px;
+    margin: 0 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    user-select: none;
+}
+div.arrowMark:hover {
+    color: #e1e1e1;
+    cursor: pointer;
+}
+div.arrowMark:active {    
+    color: #f9f9f9;
+}
+div#arrowRight {
+    right: 0;
+}
+
+
+
+    
+    
+div#Arrivals #newtext{
+	margin: -1550px;
+	padding: -1550px;
+	border: 1px solid #000;
+font-weight: bold;
+text-align: center;
+}
+ 
+    
+/* 슬라이드쇼 방향키 끝 */
+
+/*    */
+
+
+
+
+

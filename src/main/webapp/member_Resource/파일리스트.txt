@@ -1,0 +1,16 @@
+동적웹프로젝트명 => Proj_Ch13_MemberSystem
+
+패키지명 => pack_Member
+Bean1 => RegisterBean
+Bean2 => ZipCodeBean
+Bean3 => MemberMgr
+Bean4 => DBCP : DBConnectionMgr
+
+JSP폴더명 => member
+JSP파일명1 => Login.jsp
+JSP파일명2 => LoginProc.jsp
+JSP파일명3 => Logout.jsp
+JSP파일명4 => Member.jsp
+JSP파일명5 => MemberProc.jsp
+JSP파일명6 => IdCheck.jsp
+JSP파일명7 => ZipCheck.jsp
