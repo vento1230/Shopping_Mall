@@ -72,9 +72,9 @@ try {
 objConn = pool.getConnection();
 sql = "insert into tblMember ";
 sql += "(uName, uId, uPw, uEmail, ";
-sql += "uBirthday, uPhone) ";
+sql += "uBirthday, uPhone, uNumber) ";
 sql += "values ";
-sql += "(?, ?, ?, ?, ?, ?)";
+sql += "(?, ?, ?, ?, ?, ?, ?)";
 objPstmt = objConn.prepareStatement(sql);
 objPstmt.setString(1, bean.getuName());
 objPstmt.setString(2, bean.getuId());
@@ -82,6 +82,7 @@ objPstmt.setString(3, bean.getuPw());
 objPstmt.setString(4, bean.getuEmail());
 objPstmt.setString(5, bean.getuBirthday());
 objPstmt.setString(6, bean.getuPhone());
+objPstmt.setString(7, bean.getuNumber());
 
 int cnt = objPstmt.executeUpdate();
 if (cnt > 0) flag = true;   // insert가 정상실행되었음을 의미
@@ -171,8 +172,15 @@ memBean.setuId(objRs.getString("uId"));
 memBean.setuName(objRs.getString("uName"));
 memBean.setuEmail(objRs.getString("uEmail"));
 memBean.setuBirthday(objRs.getString("uBirthday"));
+memBean.setuNumber(objRs.getString("uNumber"));
 memBean.setuPhone(objRs.getString("uPhone"));
-
+memBean.setPostcode(objRs.getString("postcode"));
+memBean.setExtraAddress(objRs.getString("extraAddress"));
+memBean.setAddress(objRs.getString("address"));
+memBean.setDetailAddress(objRs.getString("detailAddress"));
+memBean.setuGender(objRs.getString("uGender"));
+memBean.setuEmailyn(objRs.getString("uEmailyn"));
+memBean.setuSmsyn(objRs.getString("uSmsyn"));
 vList.add(memBean);
 
 }
@@ -196,7 +204,9 @@ return vList;
 ///////////////////////////////////////////////////////////////////	
 /////// Member_ModProc.jsp 회원정보 수정 시작 /////////////
 ///////////////////////////////////////////////////////////////////	
-public boolean modifyMember(String uPw, String uPhone, String uEmail,String uId) {
+public boolean modifyMember(String uPw,  String uEmail, String uNumber, String uPhone, 
+		String postcode, String extraAddress, String address, String detailAddress, String uGender, 
+		String uEmailyn, String uSmsyn, String uId) {
 
 Connection objConn = null;
 PreparedStatement objPstmt = null;
@@ -207,13 +217,22 @@ try {
 objConn = pool.getConnection();
 
 sql = "update tblMember set ";
-sql += "uPw=?, uPhone=?, uEmail=? ";
-sql += "where uId = ?";
+sql += "uPw=?,  uEmail=? , uNumber=?, uPhone=?, postcode=?, extraAddress=?, address=?, detailAddress=?, ";
+sql += "uGender=?, uEmailyn=?, uSmsyn=? ";
+sql += "where uId = ? ";
 objPstmt = objConn.prepareStatement(sql);
 objPstmt.setString(1, uPw);
-objPstmt.setString(2, uPhone);
-objPstmt.setString(3, uEmail);
-objPstmt.setString(4, uId);
+objPstmt.setString(2, uEmail);
+objPstmt.setString(3, uNumber);
+objPstmt.setString(4, uPhone);
+objPstmt.setString(5, postcode);
+objPstmt.setString(6, extraAddress);
+objPstmt.setString(7, address);
+objPstmt.setString(8, detailAddress);
+objPstmt.setString(9, uGender);
+objPstmt.setString(10, uEmailyn);
+objPstmt.setString(11, uSmsyn);
+objPstmt.setString(12, uId);
 
 int cnt = objPstmt.executeUpdate();
 if (cnt > 0)
@@ -310,7 +329,87 @@ return flag;
 ///////////// Member.jsp Email  중복확인 끝 //////////////////////
 ///////////////////////////////////////////////////////////////////
 
-	
+///////////////////////////////////////////////////////////////////	
+///////////// FindIdPwProc.jsp 아이디/패스워드 찾기 시작 //////////////////////
+///////////////////////////////////////////////////////////////////
+
+public boolean findMember(String uName, String uEmail) {
+
+Connection objConn = null;
+PreparedStatement objPstmt = null;
+ResultSet objRs = null;
+
+String sql = null;
+boolean flag = false;
+
+try {
+objConn = pool.getConnection();
+sql = "select uName from tblMember where uName=? and uEmail=? ";
+objPstmt = objConn.prepareStatement(sql);
+objPstmt.setString(1, uName);
+objPstmt.setString(2, uEmail);
+
+flag = objPstmt.executeQuery().next();
+
+} catch (Exception e) {
+
+System.out.println("SQL 이슈 : " + e.getMessage());
+
+} finally {
+pool.freeConnection(objConn, objPstmt, objRs);
+}
+
+return flag;
+}
+
+
+
+
+  public Vector selectMember(String uName, String uEmail) {
+  
+  Vector<MemberBean> vList = new Vector<>();
+  
+  Connection objConn = null; 
+  PreparedStatement objPstmt = null; 
+  ResultSet objRs = null;
+  
+  String sql = null;
+  
+  try { 
+  objConn = pool.getConnection(); 
+  sql = "select * from tblMember where uName=? and uEmail= ?";
+  objPstmt = objConn.prepareStatement(sql); 
+  objPstmt.setString(1, uName);
+  objPstmt.setString(2, uEmail);
+  
+  objRs = objPstmt.executeQuery();
+  
+  if (objRs != null) { while (objRs.next()) {
+  
+  MemberBean memBean = new MemberBean();
+  
+  memBean.setuName(objRs.getString("uName"));
+  memBean.setuEmail(objRs.getString("uEmail"));
+  memBean.setuId(objRs.getString("uId"));
+  memBean.setuBirthday(objRs.getString("uPw"));
+  
+  vList.add(memBean);
+  
+  } }
+  
+  } catch (Exception e) {
+  
+  System.out.println("SQL 이슈 : " + e.getMessage());
+  
+  } finally { pool.freeConnection(objConn, objPstmt, objRs); }
+  
+  return vList; }
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////////// FindIdPwProc.jsp 아이디/패스워드 찾기 끝 //////////////////////
+  ///////////////////////////////////////////////////////////////////
+ 
+
 }// End of Class
 
 

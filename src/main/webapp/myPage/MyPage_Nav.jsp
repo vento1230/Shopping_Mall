@@ -9,6 +9,11 @@
  <title>Document</title>
 <style>
 /* nav#myPage 시작 */
+nav#myPage{
+/* border: 1px solid #000; */
+
+}
+
 nav#myPage ul li{
 	
 	line-height: 30px;
@@ -29,12 +34,12 @@ nav#myPage ul li:first-child{
 
       <nav id = "myPage">
        <ul>
-       	<li><a href="OrderHistory.jsp">마이페이지</a></li>
-       	<li><a href="ChangeInfoIntro.jsp">정보수정</a></li>
-       	<li><a href="OrderHistory.jsp">주문내역</a></li>
-       	<li><a href="">최근본상품</a></li>
-       	<li><a href="">위시리스트</a></li>
-       	<li><a href="">내 게시글 보기</a></li>
+       	<li><a href="/Shopping_mall/myPage/OrderHistory.jsp">마이페이지</a></li>
+       	<li><a href="/Shopping_mall/myPage/ChangeInfoIntro.jsp">정보수정</a></li>
+       	<li><a href="/Shopping_mall/myPage/OrderHistory.jsp">주문내역</a></li>
+       	<li><a href="/Shopping_mall/myPage/RecentlyView.jsp">최근본상품</a></li>
+       	<li><a href="/Shopping_mall/myPage/WishList.jsp">위시리스트</a></li>
+       	<li><a href="/Shopping_mall/myPage/BbsView.jsp">내 게시글 보기</a></li>
        </ul>
      
       </nav>

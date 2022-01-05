@@ -3,6 +3,17 @@
     <%@include file= "HeaderLogin.jsp" %>
      <%request.setCharacterEncoding("UTF-8"); 
            String uId = (String)session.getAttribute("idKey");
+          
+           Cookie[] cookies = request.getCookies();
+           String cookieVal="";
+           if(cookies!=null){
+               for(Cookie i:cookies){
+                   if(i.getName().equals("saveId")){
+                       cookieVal=i.getValue();
+                   }
+               }
+           }
+      
       %>
       
  <!DOCTYPE html>
@@ -65,13 +76,13 @@
         
         <form id="loginForm" action="LoginProc.jsp">
           <span>Login</span>
-          <input type="text" id="uId" name="uId" class="loginInput" placeholder="아이디" />
+          <input type="text" id="uId" name="uId" class="loginInput" value="<%=cookieVal !="" ? cookieVal : "" %>" placeholder="아이디" />
           <input type="password" id="uPw" name="uPw" class="loginInput" placeholder="비밀번호" />
           
           <div id="loginStateArea" class="flex-container">
             <div id="logOnKeep">
               <label>
-                <input type="checkbox" name="" id="" />
+                <input type="checkbox" name="saveId" id="saveId" <%=cookieVal!=""?"checked" : ""%>/>
                 <span>아이디저장</span>
               </label>
             </div>

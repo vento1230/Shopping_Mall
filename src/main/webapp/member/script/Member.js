@@ -133,7 +133,7 @@ function idCheck() {
 				let popW = 400;
 				let leftP = (w-popW)/2;
 				let h = screen.height;
-				let popH = 300;
+				let popH = 250;
 				let topP = (h-popH)/2;
 				//alert("w : " + w + "\nh : " + h);
 				
@@ -149,6 +149,26 @@ function idCheck() {
 			});
 
 //	id체크 script 끝
+
+      
+//	age체크 script 시작
+  function ageCheck() {
+	
+	 let age = $("#age").val();
+	 
+	 if(age == ""){
+			alert("아이디를 입력하세요.");
+			$("#age").focus();
+	        return;
+			}
+	 
+	}
+ 
+ $("#ageChkBtn").click(function(){
+	 ageCheck();
+		});
+//	age체크 script 끝
+
 	
 });
 

@@ -16,7 +16,7 @@ div#wrap{
 /* main#main 시작 */
 main#main{
 /*      border: 1px solid #d3d3d3; */
-     margin-left: 55px;
+     margin-left: 60px;
 	
 }
 
@@ -93,3 +93,8 @@ div#button{
 	
 /* main#main 끝 */
 
+/* MyPage_Nav 시작 */
+nav#myPage ul li:nth-of-type(2) a {
+	color:#46479b;
+}
+/* MyPage_Nav 끝 */

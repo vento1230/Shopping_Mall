@@ -8,7 +8,33 @@ public class MemberBean {
 	private String uEmail;
 	private String uBirthday;
 	private String uPhone;
+	private String uNumber;
+    private String postcode;
+	private String extraAddress;
+	private String address;
+	private String detailAddress;
+	private String uGender;
+	private String uEmailyn;
+	private String uSmsyn;
 	
+	public String getuGender() {
+		return uGender;
+	}
+	public void setuGender(String uGender) {
+		this.uGender = uGender;
+	}
+	public String getuEmailyn() {
+		return uEmailyn;
+	}
+	public void setuEmailyn(String uEmailyn) {
+		this.uEmailyn = uEmailyn;
+	}
+	public String getuSmsyn() {
+		return uSmsyn;
+	}
+	public void setuSmsyn(String uSmsyn) {
+		this.uSmsyn = uSmsyn;
+	}
 	public String getuName() {
 		return uName;
 	}
@@ -45,6 +71,37 @@ public class MemberBean {
 	public void setuPhone(String uPhone) {
 		this.uPhone = uPhone;
 	}
+	public String getuNumber() {
+		return uNumber;
+	}
+	public void setuNumber(String uNumber) {
+		this.uNumber = uNumber;
+	}
+	public String getPostcode() {
+		return postcode;
+	}
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+	public String getExtraAddress() {
+		return extraAddress;
+	}
+	public void setExtraAddress(String extraAddress) {
+		this.extraAddress = extraAddress;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getDetailAddress() {
+		return detailAddress;
+	}
+	public void setDetailAddress(String detailAddress) {
+		this.detailAddress = detailAddress;
+	}
+	
 	
 	
 }

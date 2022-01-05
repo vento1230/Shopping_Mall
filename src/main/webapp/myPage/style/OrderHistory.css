@@ -15,7 +15,7 @@ div#wrap{
 
 
 main#main{
-	margin-left: 55px;
+	margin-left: 60px;
 /*     border: 1px solid #000; */
 	
 }
@@ -27,15 +27,54 @@ main#main{
 	margin-top: 45px;
 }
 
+/* div#ul 시작 */
+
 #main ul{
 /* 	border: 1px solid #000; */
-	text-align: right;
-
+    margin-left: 453px;
+	margin-bottom: 12px;
+/*     float: right; */
+    
 
 }
+
+#main ul input{
+   width: 130px;
+   height: 20px;
+   padding-left: 10px;
+   font-size: 12px;
+   outline: none;
+}
+#main ul button.btn1{
+   height: 20px;
+   width: 40px;
+   margin-right: 10px;
+   margin-left: 5px;
+   font-size: 12px;
+   cursor: pointer;
+}
+
+#main ul button.btn2{
+   height: 20px;
+   width: 40px;
+   margin-left: 5px;
+   background-color: #fff;
+   font-size: 12px;
+   cursor: pointer;
+}
+
+#main ul button.btn3{
+   height: 20px;
+   width: 50px;
+   margin-left: 5px;
+   background-color: #fff;
+   font-size: 12px;
+   cursor: pointer;
+}
  
-/*  .right {margin-left: auto;} */
+
  
+/* div#ul 끝 */
  #main table{
      width: 1100px;
      border-top: 1px solid #000;
@@ -61,4 +100,26 @@ main#main{
     font-size: 13px;
 	
 }
+
+td:nth-child(1) {
+	    width: 120px;
+}
+ td:nth-child(2) {
+		width: 260px;
+	
+}
+ td:nth-child(3) {
+		width: 410px;
+	
+}
+
+button{
+border: 1px solid rgba(211,211,211,0.5);
+}
 /* main#main 끝 */
+
+/* MyPage_Nav 시작 */
+nav#myPage ul li:nth-of-type(3) a {
+	color:#46479b;
+}
+/* MyPage_Nav 끝 */

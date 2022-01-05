@@ -3,13 +3,22 @@
 <% 
 request.setCharacterEncoding("UTF-8");
 String uPw = request.getParameter("uPw");
-String uPhone = request.getParameter("uPhoneF") +"-"+request.getParameter("uPhoneM")+"-"+request.getParameter("uPhoneL");
-String uEmail = request.getParameter("uEmailF") +"@"+ request.getParameter("uEmailLselect");
+String uEmail = request.getParameter("uEmail");
+String uNumber = request.getParameter("uNumber");
+String uPhone = request.getParameter("uPhone");
+String postcode = request.getParameter("postcode");
+String extraAddress = request.getParameter("extraAddress");
+String address = request.getParameter("address");
+String detailAddress = request.getParameter("detailAddress");
+String uGender = request.getParameter("uGender");
+String uEmailyn = request.getParameter("uEmailyn");
+String uSmsyn = request.getParameter("uSmsyn");
 %>   
 <jsp:useBean id="mMgr" class="pack_Member.MemberMgr" scope="page" />
 <%
 String sessionUId = (String)session.getAttribute("idKey");
-boolean res = mMgr.modifyMember(uPw, uPhone, uEmail, sessionUId);
+boolean res = mMgr.modifyMember(uPw, uEmail, uNumber, uPhone, postcode, extraAddress, 
+		address, detailAddress, uGender, uEmailyn, uSmsyn, sessionUId);
 %>
 
 <script>
